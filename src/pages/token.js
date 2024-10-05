@@ -4,10 +4,11 @@ import styled from "styled-components";
 // import Sidebar from "./../components/sidebar";
 import Header from "./../components/header";
 import Footer from "./../components/footer";
+import TokenBg from "./../assets/images/token_bg.png";
 
-export default function Dashboard(props) {
+export default function Token(props) {
   return (
-    <DashboardWrapper>
+    <TokenWrapper>
       <Header />
       <div className="main-section">
         <div className="main-body">
@@ -33,6 +34,9 @@ export default function Dashboard(props) {
               Documentation <span className="box"></span>
             </div>
           </div>
+        </div>
+        <div className="main-img">
+          <img src={TokenBg} alt="mainToken" />
         </div>
         <div className="main-footer">
           <p>
@@ -61,18 +65,27 @@ export default function Dashboard(props) {
         </div>
       </div>
       <Footer />
-    </DashboardWrapper>
+    </TokenWrapper>
   );
 }
-const DashboardWrapper = styled.div`
+const TokenWrapper = styled.div`
   .main-section {
     position: relative;
     background: #090a0a;
+    display: flex;
     width: 100%;
-    height: 100vh;
-    padding: 190px 183px;
+    // height: 100vh;
+    padding: 90px 183px;
+    padding-bottom: 140px;
+    display: flex;
+    justify-content: space-between;
     .main-body {
       max-width: 470px;
+    }
+    .main-img {
+      img {
+        max-width: 420px;
+      }
     }
     .main-title {
       display: flex;
@@ -93,6 +106,23 @@ const DashboardWrapper = styled.div`
       max-width: 460px;
       color: #6e7073;
       margin: 0px;
+    }
+    @media (max-width: 880px) {
+      padding: 68px 20px;
+      flex-wrap: wrap;
+      flex-reverse: column-reverse;
+      justify-content: center;
+      .main-img img {
+        width: 100%;
+      }
+      h1 {
+        font-size: 36px;
+        line-height: 43.57px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+      }
     }
   }
   .main-footer {

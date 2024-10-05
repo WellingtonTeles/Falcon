@@ -1,33 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "./../assets/images/header_logo_1.png";
 import TryNow from "./../assets/images/try_now.png";
 import Hamburg from "./../assets/images/hamburg.png";
-// import Button from "./basics/button";
-// import ButtonGroup from "./basics/buttongroup";
-// import { display_sm } from "../assets/variable/global";
+import { Link } from "react-router-dom";
 
-export default function Header(props) {
-  // const { title, subItem, onPrevMain, preview, tag } = props;
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <HeaderWrapper>
       <div className="falcon-header is-desktop">
-        <img src={logo} />
+        <Link to="/home">
+          {" "}
+          <img src={logo} />
+        </Link>
         <ul className="main-body">
           <li>
-            <a>Home</a>
+            <Link to="/home">
+              <a>Home</a>
+            </Link>
           </li>
           <li>
-            <a>Token</a>
+            <Link to="/token">
+              <a>Token</a>
+            </Link>
           </li>
           <li>
-            <a>About</a>
+            <Link to="/aboutus">
+              <a>About</a>
+            </Link>
           </li>
           <li>
-            <a>Falcon</a>
+            <Link to="/intelligence">
+              {" "}
+              <a>Falcon</a>
+            </Link>
           </li>
           <li>
-            <a>AI</a>
+            <Link to="/loading">
+              {" "}
+              <a>AI</a>
+            </Link>
           </li>
         </ul>
         <div className="btn-gray">
@@ -40,15 +57,50 @@ export default function Header(props) {
           <div className="btn-gray">
             Try Now <img src={TryNow} alt="HamTryNowburg" />
           </div>
-          <div className="btn-gray">
+          <div className="btn-gray" onClick={toggleSidebar}>
             <img className="Hamburg" src={Hamburg} alt="Hamburg" />
           </div>
         </div>
+      </div>
+      <div className={`sidebar ${isOpen ? "open" : ""}`}>
+        <div className="close-btn" onClick={toggleSidebar}>
+          &times; {/* Close Icon */}
+        </div>
+        <ul>
+          <li>
+            <Link to="/home">
+              <a>Home</a>
+            </Link>
+          </li>
+          <li>
+            <Link to="/token">
+              <a>Token</a>
+            </Link>
+          </li>
+          <li>
+            <Link to="/aboutus">
+              <a>About</a>
+            </Link>
+          </li>
+          <li>
+            <Link to="/intelligence">
+              {" "}
+              <a>Falcon</a>
+            </Link>
+          </li>
+          <li>
+            <Link to="/loading">
+              {" "}
+              <a>AI</a>
+            </Link>
+          </li>
+        </ul>
       </div>
     </HeaderWrapper>
   );
 }
 const HeaderWrapper = styled.div`
+  position: relative;
   padding: 6px 87px;
   max-width: 1266px;
   margin-left: auto;
@@ -81,6 +133,7 @@ const HeaderWrapper = styled.div`
         line-height: 19.36px;
         text-align: left;
         color: #e8e8e8;
+        text-decoration: none;
       }
     }
     .btn-gray {
@@ -144,5 +197,46 @@ const HeaderWrapper = styled.div`
         }
       }
     }
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    right: 0; /* Show sidebar */
+  }
+
+  .close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: right;
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .sidebar li {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .sidebar a:hover {
+    text-decoration: underline;
   }
 `;

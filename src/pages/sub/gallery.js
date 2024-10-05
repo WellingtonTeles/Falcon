@@ -108,4 +108,7 @@ const PrototypeGalleryWrapper = styled.div`
       }
     }
   }
+  @media (max-width: 880px) {
+    padding: 68px 20px;
+  }
 `;

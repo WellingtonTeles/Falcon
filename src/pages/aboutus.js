@@ -201,6 +201,9 @@ const AboutUsWrapper = styled.div`
       max-width: 700px;
       margin: 0px auto;
     }
+    @media (max-width: 880px) {
+      padding: 64px 20px;
+    }
   }
   .main-footer {
     position: absolute;
@@ -360,6 +363,15 @@ const AboutUsWrapper = styled.div`
             height: 24px;
             background: white;
           }
+        }
+      }
+    }
+    @media (max-width: 880px) {
+      padding: 64px 20px;
+      .item-list {
+        .item,
+        .item .item-bg {
+          width: 100%;
         }
       }
     }

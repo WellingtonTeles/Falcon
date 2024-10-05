@@ -1,25 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-// import Sidebar from "./../components/sidebar";
 import Header from "./../components/header";
 import Footer from "./../components/footer";
-import falco from "./../assets/images/falcon-black-icon.png";
-import join from "./../assets/images/join_icon.png";
-import Phone from "./../assets/images/PHONE.png";
-import Phone2 from "./../assets/images/PHONE_2.png";
-import PhoneLink from "./../assets/images/video_icon.png";
 import Ethereum from "./../assets/images/eth_logo.png";
 import Base from "./../assets/images/base_logo.png";
 import Tron from "./../assets/images/tron_logo.png";
 import Ton from "./../assets/images/ton_logo.png";
 import Solana from "./../assets/images/solana_logo.png";
 import Arbitrum from "./../assets/images/arbitrum_logo.png";
-import Rate from "./sub/rate";
 import FrequesntlyAsk from "./sub/ask";
-import TelegramApp from "./sub/telegram";
-import Blog from "./sub/blog";
-import Trading from "./sub/trading";
 import CardSection from "./sub/card";
 import PrototypeGallery from "./sub/gallery";
 import Terminal from "./sub/terminal";
@@ -32,83 +22,6 @@ export default function Intelligence(props) {
     { name: "Ton", src: Ton },
     { name: "Solana", src: Solana },
     { name: "Arbitrum", src: Arbitrum },
-  ];
-  const phone_seconds = [
-    {
-      direction: "left",
-      title: "Fast and secure on-chain trading.",
-      name: "On-Chain",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      list: [
-        "Create Wallet",
-        "DEX Swapping",
-        "Limit Orders",
-        "TWAP Orders",
-        "Bridge Chains",
-        "View Portfolio",
-      ],
-      link: {
-        name: "Swapping and Bridging.",
-        description: "Watch the demo",
-      },
-    },
-    {
-      direction: "right",
-      title: "CEX account trading and management.",
-      name: "Centralized Exchanges",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      list: ["Buy and Sell", "Long and Short", "Long and Short"],
-      link: {
-        name: "Connecting your CEX account.",
-        description: "Watch the demo",
-      },
-    },
-    {
-      direction: "right",
-      title: "CEX account trading and management.",
-      name: "Centralized Exchanges",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      list: ["Buy and Sell", "Long and Short", "Long and Short"],
-      link: {
-        name: "Connecting your CEX account.",
-        description: "Watch the demo",
-      },
-    },
-    {
-      direction: "left",
-      title: "Mini-App Rewards Falcon Community.",
-      name: "NOW LIVE",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      list: [
-        "Earn points by completing tasks",
-        "Invite friends to boost rewards",
-        "Falcon airdrop coming soon",
-      ],
-      link: {
-        name: "Using Falcon's Mini-App.",
-        description: "Watch the demo",
-      },
-    },
-    {
-      direction: "left",
-      title: "FalconAI LLM makes trading intelligent.",
-      name: "COMING SOON",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      list: [
-        "Simple text-to-action",
-        "Ask Falcon questions",
-        "Supports 12+ languages",
-      ],
-      link: {
-        name: "Talk to Falcon.",
-        description: "Watch the demo",
-      },
-    },
   ];
   const cards = [
     {
@@ -241,6 +154,9 @@ const IntelligenceWrapper = styled.div`
     }
     .btn-groups {
       margin-bottom: 0px;
+    }
+    @media (max-width: 880px) {
+      padding: 64px 20px;
     }
   }
   .main-footer {

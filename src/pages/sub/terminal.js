@@ -22,7 +22,6 @@ export default function Terminal() {
             </button>
           ))}
         </div>
-        {/* <div className="content"></div> */}
         <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
         <div className="terminal">
           <div className="terminal-left terminal-card">
@@ -135,6 +134,25 @@ const TerminalWrapper = styled.div`
 
     .content {
       margin-top: 20px;
+    }
+  }
+  @media (max-width: 880px) {
+    padding: 68px 20px;
+    .wrapper {
+      .button-group {
+        width: 100%;
+        .tab-button {
+          padding: 6px 12px;
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+      .terminal {
+        flex-wrap: wrap;
+        .terminal-card {
+          padding: 20px;
+        }
+      }
     }
   }
 `;

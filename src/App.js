@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loading from "./pages/loading";
 import Home from "./pages/Home";
-import Dashboard from "./pages/dashboard";
+import Token from "./pages/token";
 import AboutUs from "./pages/aboutus";
 import Intelligence from "./pages/Intelligence";
 
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/intelligence" element={<Intelligence />} />
-          <Route path="/token" element={<Dashboard />} />
+          <Route path="/token" element={<Token />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="*" element={<Loading />} />
         </Routes>
