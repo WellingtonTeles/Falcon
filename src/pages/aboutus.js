@@ -172,7 +172,7 @@ const AboutUsWrapper = styled.div`
     position: relative;
     background: #090a0a;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     padding: 84px;
     .main-title {
       display: flex;

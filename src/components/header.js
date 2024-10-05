@@ -134,6 +134,11 @@ const HeaderWrapper = styled.div`
         text-align: left;
         color: #e8e8e8;
         text-decoration: none;
+        &:hover,
+        &.active {
+          font-weight: 500;
+          color: #e8e8e8;
+        }
       }
     }
     .btn-gray {
