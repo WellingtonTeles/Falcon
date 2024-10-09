@@ -24,6 +24,12 @@ import Try from "./../assets/images/try_falcon_icon.png";
 import HomeLogo from "./../assets/images/home_logo.png";
 import Arbitrum from "./../assets/images/arbitrum_logo.png";
 import Substract from "./../assets/images/Subtract.png";
+import onChainActivityTracking from "./../assets/images/onChainActivityTracking.png";
+import tradeOnCEXs from "./../assets/images/tradeOnCEXs.png";
+import strongSecurity from "./../assets/images/strongSecurity.png";
+import walletManager from "./../assets/images/walletManager.png";
+import snipingFeatures from "./../assets/images/snipingFeatures.png";
+import fastestOrdersAndSwaps from "./../assets/images/fastestOrdersAndSwaps.png";
 import Rate from "./sub/rate";
 import FrequesntlyAsk from "./sub/ask";
 import TelegramApp from "./sub/telegram";
@@ -128,34 +134,34 @@ export default function Home(props) {
     {
       name: "Fastest Orders and Swaps",
       description: "Execute trades faster than any other bot on the market.",
-      src: "",
+      src: fastestOrdersAndSwaps,
     },
     {
       name: "Sniping Features",
       description:
         "LP sniping features gets you into new coins with an advantage.",
-      src: "",
+      src: snipingFeatures,
     },
     {
       name: "Wallet Manager",
       description: "Create multiple wallets across many chains with ease.",
-      src: "",
+      src: walletManager,
     },
     {
       name: "Strong Security",
       description: "Our 256-bit encryption keeps your keys safe and secure.",
-      src: "",
+      src: strongSecurity,
     },
     {
       name: "Trade on CEXs",
       description:
         "Connect Falcon to your CEX account and trade from Telegram.",
-      src: "",
+      src: tradeOnCEXs,
     },
     {
       name: "On-Chain Activity Tracking",
       description: "Track wallets, holders, prices and more with Falcon.",
-      src: "",
+      src: onChainActivityTracking,
     },
   ];
   return (

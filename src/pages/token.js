@@ -36,7 +36,15 @@ export default function Token(props) {
           </div>
         </div>
         <div className="main-img">
-          <img src={TokenBg} alt="mainToken" />
+          <div class="flip-box-hidden">
+            <img src={TokenBg} alt="mainToken" />
+          </div>
+          <div class="flip-box-front">
+            <img src={TokenBg} alt="mainToken" />
+          </div>
+          <div class="flip-box-back">
+            <img src={TokenBg} alt="mainToken" />
+          </div>
         </div>
         <div className="main-footer">
           <p>
@@ -228,5 +236,37 @@ const TokenWrapper = styled.div`
         }
       }
     }
+  }
+  .main-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .flip-box-hidden {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  .main-img:hover {
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-front,
+  .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-box-back {
+    transform: rotateY(180deg);
   }
 `;

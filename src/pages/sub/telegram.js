@@ -6,8 +6,16 @@ export default function TelegramApp() {
   return (
     <TelegramAppWrapper>
       <div className="wrapper">
-        <div>
-          <img src={TokenImg} alt="token img" />
+        <div className="main-img">
+          <div class="flip-box-hidden">
+            <img src={TokenImg} alt="mainToken" />
+          </div>
+          <div class="flip-box-front">
+            <img src={TokenImg} alt="mainToken" />
+          </div>
+          <div class="flip-box-back">
+            <img src={TokenImg} alt="mainToken" />
+          </div>
         </div>
         <div className="main">
           <h1>Join the Falcon Token Airdrop</h1>
@@ -98,6 +106,38 @@ const TelegramAppWrapper = styled.div`
         }
       }
     }
+  }
+  .main-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .main-img:hover {
+    transform: rotateY(180deg);
+  }
+  .flip-box-hidden {
+    width: 100%;
+    height: 100%;
+    max-width: 339px;
+    opacity: 0;
+  }
+  .flip-box-front,
+  .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-box-back {
+    transform: rotateY(180deg);
   }
   @media (max-width: 880px) {
     padding: 68px 20px;

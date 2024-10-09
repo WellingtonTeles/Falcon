@@ -3,6 +3,7 @@ import styled from "styled-components";
 import logo from "./../assets/images/header_logo_1.png";
 import TryNow from "./../assets/images/try_now.png";
 import Hamburg from "./../assets/images/hamburg.png";
+import blueTry from "./../assets/images/blule_try.png";
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -48,7 +49,9 @@ export default function Header() {
           </li>
         </ul>
         <div className="btn-gray">
-          Log in <span>L</span>
+          {/* Log in <span>L</span> */}
+          Try Falcon Now{" "}
+          <img className="blue-img" src={blueTry} alt="blue_try" />
         </div>
       </div>
       <div className="falcon-header is-mobile">
@@ -243,5 +246,11 @@ const HeaderWrapper = styled.div`
 
   .sidebar a:hover {
     text-decoration: underline;
+  }
+  .falcon-header .btn-gray .blue-img {
+    width: 16px;
+    height: 13.33px;
+    margin-left: 8px;
+    margin-bottom: 0px;
   }
 `;

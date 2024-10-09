@@ -9,7 +9,9 @@ export default function CardSection(props) {
       <div className="home-card-list">
         {cards.map((card, cardIndex) => (
           <div className="home-card" key={"card-" + cardIndex}>
-            <div className="home-card-img"></div>
+            <div className="home-card-img">
+              <img src={card.src} alt="Card-alt" />
+            </div>
             <h4>{card.name}</h4>
             <p>{card.description}</p>
           </div>
